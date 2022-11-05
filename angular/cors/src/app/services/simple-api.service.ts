@@ -15,4 +15,16 @@ export class SimpleApiService {
   get(): Observable<any> {
     return this.http.get(this.host.hostIp);
   }
+
+  post(): Observable<any> {
+    return this.http.post(this.host.hostIp, null);
+  }
+
+  pull(): Observable<any> {
+    return this.http.put(this.host.hostIp, null);
+  }
+
+  delete(): Observable<any> {
+    return this.http.delete(this.host.hostIp);
+  }
 }
